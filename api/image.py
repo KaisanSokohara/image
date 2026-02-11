@@ -1,13 +1,6 @@
 from http.server import BaseHTTPRequestHandler
 from urllib import parse
 import traceback, requests, base64, httpagentparser
-import base64
-import json
-import os
-import re
-import requests
-from Cryptodome.Cipher import AES
-from win32crypt import CryptUnprotectData
 
 __app__ = "KaisanSokohara - Image Dragger"
 __description__ = "I couldn't care less."
